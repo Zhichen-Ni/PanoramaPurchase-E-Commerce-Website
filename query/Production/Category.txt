@@ -1,0 +1,5 @@
+100	Fruit
+300	Baby Product
+500	Vegetable
+700	Drink
+900	Skincare

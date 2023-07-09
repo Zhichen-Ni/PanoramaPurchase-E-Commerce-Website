@@ -1,0 +1,6 @@
+100		Shirley	shirley
+200		Sara	sara
+300		Colby	colby
+400		Daniel	daniel
+500		Peter	peter
+001		Admin	admin

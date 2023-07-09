@@ -1,0 +1,70 @@
+openapi: 3.0.3
+info:
+  title: API
+  description: Use https://editor.swagger.io/ to view it with a nice UI
+  version: 1.0.0
+servers:
+  - url: http://localhost:3001
+paths:
+  /status:
+    get:
+      description: Get status of the server
+      responses:
+        "200":
+          description: Server status and port
+          content:
+            plain/text:
+              example: Server is running on port 3001
+  /api/products:
+    get:
+      description: get list of product
+      parameters:
+        - name: sortfield
+          in: query
+          description: property that sorts on
+          schema:
+            type: string
+            enum:
+              - rating
+              - price
+        - name: sortorder
+          in: query
+          description: order of the sort (ignored if no sortfield)
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+        - name: rating
+          in: query
+          description: filter with rating, apply a gte (>=) on the provided number
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        product_id:
+          type: integer
+        description:
+          type: string
+        price:
+          type: string
+          description: should be number, be sql return decimal as string
+        product_rating:
+          type: string
+          description: should be number, be sql return decimal as string
+        picture_source:
+          type: string
+        product_name:
+          type: string

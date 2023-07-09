@@ -1,0 +1,52 @@
+#para {
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#para0 {
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    cursor: pointer; 
+    overflow: hidden;
+}
+
+#price {
+    text-align: left;
+    font-weight: bold;
+}
+
+#rating {
+    text-align: left;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+  
+#img1 {
+    width: 270px;
+    height: 300px;
+}
+  
+#button {
+    position: absolute;
+    top: 91%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 55%;
+    text-align: center;
+}
